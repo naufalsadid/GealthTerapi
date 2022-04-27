@@ -71,12 +71,13 @@ public class TerapiActivity extends AppCompatActivity {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#95"));
             dots[i].setTextSize(60);
-            dots[i].setTextColor(getResources().getColor(R.color.teal_200, getApplicationContext().getTheme()));
+            dots[i].setLetterSpacing(0.2F);
+            dots[i].setTextColor(getResources().getColor(R.color.softgrey, getApplicationContext().getTheme()));
             mDotLayout.addView(dots[i]);
 
         }
 
-        dots[position].setTextColor(getResources().getColor(R.color.teal_700, getApplicationContext().getTheme()));
+        dots[position].setTextColor(getResources().getColor(R.color.darkgrey, getApplicationContext().getTheme()));
 
     }
 
