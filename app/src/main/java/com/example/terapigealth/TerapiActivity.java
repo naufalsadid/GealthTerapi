@@ -6,9 +6,11 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class TerapiActivity extends AppCompatActivity {
@@ -32,11 +34,11 @@ public class TerapiActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (getitem(0) < 1)
-                    mSLideViewPager.setCurrentItem(getitem(1),true);
+                if (getitem(0) < 2)
+                    mSLideViewPager.setCurrentItem(getitem(1), true);
                 else {
 
-                    Intent i = new Intent(TerapiActivity.this,SelesaiActivity.class);
+                    Intent i = new Intent(TerapiActivity.this, SelesaiActivity.class);
                     startActivity(i);
                     finish();
 
@@ -58,22 +60,23 @@ public class TerapiActivity extends AppCompatActivity {
 
     }
 
-    public void setUpindicator(int position){
+    public void setUpindicator(int position) {
 
-        dots = new TextView[2];
+        dots = new TextView[3];
         mDotLayout.removeAllViews();
 
-        for (int i = 0 ; i < dots.length ; i++){
+        for (int i = 0; i < dots.length; i++) {
+
 
             dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226"));
-            dots[i].setTextSize(35);
-            dots[i].setTextColor(getResources().getColor(R.color.teal_200,getApplicationContext().getTheme()));
+            dots[i].setText(Html.fromHtml("&#95"));
+            dots[i].setTextSize(60);
+            dots[i].setTextColor(getResources().getColor(R.color.teal_200, getApplicationContext().getTheme()));
             mDotLayout.addView(dots[i]);
 
         }
 
-        dots[position].setTextColor(getResources().getColor(R.color.teal_700,getApplicationContext().getTheme()));
+        dots[position].setTextColor(getResources().getColor(R.color.teal_700, getApplicationContext().getTheme()));
 
     }
 
@@ -96,15 +99,15 @@ public class TerapiActivity extends AppCompatActivity {
         }
     };
 
-    private int getitem(int i){
+    private int getitem(int i) {
 
         return mSLideViewPager.getCurrentItem() + i;
     }
 
     public void btnKembali(View view) {
         if (mSLideViewPager.getCurrentItem() != 0) {
-            mSLideViewPager.setCurrentItem(mSLideViewPager.getCurrentItem() - 1,true);
-        }else{
+            mSLideViewPager.setCurrentItem(mSLideViewPager.getCurrentItem() - 1, true);
+        } else {
             finish();
         }
     }

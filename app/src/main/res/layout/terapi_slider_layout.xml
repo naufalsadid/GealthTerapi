@@ -17,8 +17,10 @@
         android:layout_marginTop="160dp"
         android:text="Kepala tegak, mata melihat ke atas (langit-langit), kemudian melihat
 ke lantai. Ulangi 5-10 kali."
+        android:textColor="@color/darkgrey"
+        android:fontFamily="@font/poppins_medium"
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textSize="16sp"/>
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/titleImage"

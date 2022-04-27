@@ -18,13 +18,15 @@ public class TerapiAdapter extends PagerAdapter {
 
             R.drawable.mata1,
             R.drawable.mata2,
+            R.drawable.mata3,
 
     };
 
     int[] headings = {
 
             R.string.heading1,
-            R.string.heading2
+            R.string.heading2,
+            R.string.heading3
 
 
     };
