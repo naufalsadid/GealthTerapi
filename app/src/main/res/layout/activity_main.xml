@@ -8,9 +8,27 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textTerapiMata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Terapi mata"
+        android:textColor="@color/darkgrey"
+        android:textSize="20sp"></TextView>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp">
 
@@ -34,17 +52,59 @@
                 android:text="Hindari dampak buruk akibat terlalu lama menatap layar dengan mengikuti gerakan senam mata sederhana" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnTerapiMata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/green"
                 android:fontFamily="@font/poppins_medium"
                 android:onClick="btnMulai"
                 android:text="Mulai"
-                android:layout_margin="15dp"
-                android:backgroundTint="@color/green"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textSize="16sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/terapi_mata_cardview" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Hindari dampak buruk akibat terlalu lama menatap layar dengan mengikuti gerakan senam mata sederhana" />
+
+            <Button
+                android:id="@+id/btnTerapiTangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/green"
+                android:fontFamily="@font/poppins_medium"
+                android:onClick="btnMulai"
+                android:text="Mulai"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
 
 </LinearLayout>
